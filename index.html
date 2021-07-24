@@ -5,62 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/style.css" type="text/css">
+  <link rel="stylesheet" href="/normalise.css" type="text/css">
   <script defer src="/script.js" type="text/javascript"></script>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-  
-  About
-  Services
-  Projects
-  Contact
-
-  We are creatives
-
-  Transform your brand
-
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
-
-  Learn more
-
-  Stand out to the right audience
-
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
-
-  Learn more
-
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
-  Client testimonials
-
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
-
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
-
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
-
-  About
-  Services
-  Projects
-  Contact
+  <div class="grid-container">
+    <header class="header">
+      <div class="nav-logo-container">
+        <a href="/"><img src="/images/logo.svg" alt="Sunnyside logo" class="logo"></a>
+        <nav class="main-nav">
+          <ul class="main-nav-ul">
+            <li><a href="/" class="white">About</a></li>
+            <li><a href="/" class="white">Services</a></li>
+            <li><a href="/" class="white">Projects</a></li>
+            <li><button class="contact-btn" type="button">Contact</button></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class="title">We are creatives</h1> <!-- potentially container for txt-align center -->
+      <img src="/images/icon-arrow-down.svg">
+    </header>
+  </div>
+  <main class="main"> <!-- Expand 1fr for sticky footer -->
+    <div class="egg"></div>
+    <div class="transform">
+      <section>
+        <h2 class="transform-heading h2">Transform your brand</h2>
+        <p class="p">We are a full-service creative agency specializing in helping brands grow fast. 
+          Engage your clients through compelling visuals that do most of the marketing for you.
+        </p>
+        <a href="/" class="learn-more">Learn more</a>
+      </section>
+    </div>
+    <div class="wine"></div>
+    <div class="standout">
+      <section>
+        <h2 class="standout-heading h2">Stand out to the right audience</h2>
+        <p class="p">Using a collaborative formula of designers, researchers, photographers, videographers, 
+          and copywriters, we’ll build and extend your brand in digital places.
+        </p>
+        <a href="/" class="learn-more">Learn more</a>
+      </section>
+    </div>
+    <div class="cherry">
+      <section>
+        <h3 class="h3">Graphic design</h3>
+        <p class="p p-centred">Great design makes you memorable. We deliver artwork that underscores your brand message
+           and captures potential clients’ attention.
+        </p>
+      </section>
+    </div>
+    <div class="orange">
+      <section>
+        <h3 class="h3">Photography</h3>
+        <p class="p p-centred">Increase your credibility by getting the most stunning, high-quality photos that
+           improve your business image.
+        </p>
+      </section>
+    </div>
+    <div class="testimonials">
+      <section class="testimonials-content">
+        <h3>Client testimonials</h3>
+        <article class="testimonials-article">
+          <img src="/images/image-emily.jpg" alt="Emily profile picture">
+          <p class="p p-centred">We put our trust in Sunnyside and they delivered, 
+            making sure our needs were met and deadlines were always hit.
+          </p>
+          <h4 class="h4">Emily R.</h4>
+          <small class="small">Marketing Director</small>
+        </article>
+        <article class="testimonials-article">
+          <img src="/images/image-thomas.jpg" alt="Thomas profile picture">
+          <p class="p p-centred">Sunnyside’s enthusiasm coupled with their keen interest
+             in our brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <h4 class="h4">Thomas S.</h4>
+          <small class="small">Chief Operating Officer</small>
+        </article>
+        <article class="testimonials-article">
+          <img src="/images/image-jennie.jpg" alt="Jennie profile picture">
+          <p class="p p-centred">Incredible end result! Our sales increased over 
+            400% when we worked with Sunnyside. Highly recommended!
+          </p>
+          <h4 class="h4">Jennie F.</h4>
+          <small class="small">Business Owner</small>
+        </article>
+      </section>
+    </div>
+    <div class="images">
+      <section class="milk"></section>
+      <section class="half-orange"></section>
+      <section class="cone"></section>
+      <section class="blocks"></section>
+    </div>
+  </main>
+  <footer class="footer">
+    <img src="/images/logo.svg" alt="Sunnyside logo">
+    <nav class="footer-nav">
+      <ul class="footer-nav-ul">
+        <li><a href="/">About</a></li>
+        <li><a href="/">Services</a></li>
+        <li><a href="/">Projects</a></li>
+      </ul>
+    </nav>
+    <div class="social-media"> <!--Accessibility for links with no txtContent?-->
+      <!--Better container el?-->
+      <a href="/"><img src="/images/icon-facebook.svg" alt="Facebook logo"></a>
+      <a href="/"><img src="/images/icon-instagram.svg" alt="Instagram logo"></a>
+      <a href="/"><img src="/images/icon-twitter.svg" alt="Twitter logo"></a>
+      <a href="/"><img src="/images/icon-pinterest.svg" alt="Pinterest logo"></a>
+    </div>
+  </footer>
 </body>
 </html>
