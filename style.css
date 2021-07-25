@@ -1,4 +1,9 @@
 /*
+
+TO DO: 
+
+    Convert layout to flexible grid repeat track value
+
  Primary
 
 - Soft red: hsl(7, 99%, 70%)
@@ -14,21 +19,14 @@
 - Dark grayish blue: hsl(232, 10%, 55%)
 - Grayish blue: hsl(210, 4%, 67%)
 - White: hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px
-
-### Font
-
-- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
-- Weights: 600
-- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-- Weights: 700, 900 
-
-TO DO: 
-
-Convert layout to flexible grid repeat track value
 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font: 18px/1.5 "Barlow", "Fraunces", sans-serif;
+}
