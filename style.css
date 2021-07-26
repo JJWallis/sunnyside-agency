@@ -125,7 +125,6 @@ TO DO:
 .title {
   color: white;
   font-size: 2rem;
-  font-family: Fraunces;
   font-weight: 900;
   text-align: center;
   letter-spacing: 0.4ch;
@@ -158,16 +157,7 @@ TO DO:
   text-align: center;
 }
 
-.transform p,
-.standout p,
-.cherry p,
-.orange p {
-  width: 75%;
-  margin: auto;
-}
-
 .h2 {
-  font-family: Fraunces;
   width: 70%;
   margin: 1rem auto;
 }
@@ -212,13 +202,61 @@ TO DO:
 }
 
 .h3 {
-  font-family: Fraunces;
   font-size: 1.5rem;
   color: hsl(167, 40%, 24%);
 }
 
+.testimonials,
+.testimonials-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials {
+  justify-content: center;
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.testimonials-heading {
+  margin: auto;
+  color: hsl(210, 4%, 67%);
+  font-size: 1.3rem;
+  letter-spacing: 0.3ch;
+}
+
+.testimonials-content {
+  margin: 3rem 0;
+}
+
+.testimonials-article:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.testimonials-content p {
+  width: 60%;
+}
+
+.name,
+.job-role {
+  display: block;
+}
+
+.name {
+  margin-top: 1.5rem;
+}
+
+.job-role {
+  margin-bottom: 1.2rem;
+}
+
 /* =================
-REUSABLE CLASSES
+REPETTITIVE STYLES
 ================== */
 a {
   text-decoration: none;
@@ -238,7 +276,17 @@ a {
 
 .p {
   font-size: 0.9em;
+  width: 75%;
+  margin: auto;
 }
+
+.title,
+.h2,
+.h3,
+.testimonials-heading {
+  font-family: Fraunces;
+}
+
 /* ============
   ELEMENT STATE 
 =============== */
