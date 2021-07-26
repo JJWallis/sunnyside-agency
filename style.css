@@ -2,12 +2,13 @@
 
 TO DO: 
 
-    Convert layout to flexible grid repeat track value
+    Convert layout to flexible grid repeat track value 
+    Grid template areas for wider layout 
+    minMax values for txt grid items
+    Border bottom style for links in <main>
+    Responsiveness of nav - calc()? 
 
- Primary
 
-- Soft red: hsl(7, 99%, 70%)
-- Yellow: hsl(51, 100%, 49%)
 - Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
 - Dark blue (photography text): hsl(198, 62%, 26%)
 - Dark moderate cyan (footer): hsl(168, 34%, 41%)
@@ -28,7 +29,7 @@ TO DO:
 }
 
 :root {
-  font: 18px/1.5 "Barlow", "Fraunces", sans-serif;
+  font: normal 18px/1.5 "Barlow", "Fraunces", sans-serif;
 }
 
 /* =================
@@ -48,6 +49,7 @@ TO DO:
 
 .grid-container {
   min-height: 100vh;
+  grid-template-rows: 430px 1fr 200px;
   border: 1px solid black;
 }
 
@@ -56,12 +58,12 @@ TO DO:
 }
 
 .main {
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(4, 400px) repeat(2, 500px) 1fr 300px;
 }
 
 .images {
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 100px);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .images > * {
@@ -72,7 +74,7 @@ TO DO:
         ITEMS 
 ======================*/
 .header {
-  padding: 1rem 1rem 8.3rem 1rem;
+  padding: 1rem;
   background: lightblue url("/images/desktop/image-header.jpg") no-repeat center;
   background-size: cover;
   position: relative;
@@ -104,9 +106,8 @@ TO DO:
 
 .main-nav-ul a,
 .footer-nav-ul a {
-  color: hsl(213, 9%, 39%);
-  text-decoration: none;
   display: block;
+  color: hsl(213, 9%, 39%);
 }
 
 .main-nav-ul a {
@@ -137,14 +138,67 @@ TO DO:
   margin: auto;
 }
 
+.egg {
+  background: yellow url("/images/desktop/image-transform.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.transform,
+.standout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.transform section,
+.standout section {
+  width: 80%;
+}
+
+.h2 {
+  font-family: Fraunces;
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.transform a {
+  border-bottom: 5px solid rgba(255, 232, 102, 0.6);
+}
+
+.standout a {
+  border-bottom: 5px solid rgba(253, 122, 104, 0.6);
+}
+
+.wine {
+  background: rgba(253, 122, 104) url("/images/desktop/image-stand-out.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
 /* =================
 REUSABLE CLASSES
 ================== */
+a {
+  text-decoration: none;
+}
+
+.main a {
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 5px;
+  color: black;
+  font-weight: 900;
+}
 
 .uppercase {
   text-transform: uppercase;
 }
 
+.p {
+  font-size: 0.9em;
+}
 /* ============
   ELEMENT STATE 
 =============== */
@@ -162,4 +216,12 @@ REUSABLE CLASSES
   background-color: hsl(213, 9%, 39%);
   color: hsl(51, 100%, 49%);
   transition: 500ms;
+}
+
+.transform a:hover {
+  border-bottom: 5px solid rgba(255, 232, 102);
+}
+
+.standout a:hover {
+  border-bottom: 5px solid rgba(253, 122, 104);
 }
