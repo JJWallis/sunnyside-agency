@@ -9,8 +9,6 @@ TO DO:
     Responsiveness of nav - calc()? 
 
 
-- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-- Dark blue (photography text): hsl(198, 62%, 26%)
 - Dark moderate cyan (footer): hsl(168, 34%, 41%)
 
 ### Neutral
@@ -139,7 +137,7 @@ TO DO:
 }
 
 .egg {
-  background: yellow url("/images/desktop/image-transform.jpg") no-repeat center;
+  background: yellow url("/images/mobile/image-transform.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -153,8 +151,19 @@ TO DO:
 }
 
 .transform section,
-.standout section {
+.standout section,
+.cherry section,
+.orange section {
   width: 80%;
+  text-align: center;
+}
+
+.transform p,
+.standout p,
+.cherry p,
+.orange p {
+  width: 75%;
+  margin: auto;
 }
 
 .h2 {
@@ -172,9 +181,40 @@ TO DO:
 }
 
 .wine {
-  background: rgba(253, 122, 104) url("/images/desktop/image-stand-out.jpg")
+  background: rgba(253, 122, 104) url("/images/mobile/image-stand-out.jpg")
     no-repeat center;
   background-size: cover;
+}
+
+.cherry {
+  background: lightseagreen url("/images/desktop/image-graphic-design.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.orange {
+  background: lightskyblue url("/images/desktop/image-photography.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.cherry,
+.orange {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.cherry section,
+.orange section {
+  margin-top: auto;
+}
+
+.h3 {
+  font-family: Fraunces;
+  font-size: 1.5rem;
+  color: hsl(167, 40%, 24%);
 }
 
 /* =================
