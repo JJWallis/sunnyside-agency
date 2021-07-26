@@ -30,3 +30,7 @@ TO DO:
 :root {
   font: 18px/1.5 "Barlow", "Fraunces", sans-serif;
 }
+
+.grid-item {
+  outline: 1px solid black;
+}
