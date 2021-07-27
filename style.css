@@ -1,12 +1,11 @@
 /*
 TO DO: 
 
-    Alignment on wider screen - cherry/orange txt
-    Responsiveness of nav - calc()? 
     Re-factor 
+    Responsiveness of nav - calc()? 
     Background ims on mobile 
     Border bottom style for links in <main>
-    Mobile nav - start off invisible when return to smaller screen size from wider | functionality - esc key to exit 
+    Mobile nav - start off invisible when return to smaller screen size from wider 
     Accessibility for SVG 
 
 */
@@ -44,7 +43,7 @@ TO DO:
 .main {
   grid-template-rows:
     repeat(4, minMax(400px, auto)) repeat(2, minMax(500px, auto))
-    1fr minmax(520px, auto);
+    1fr minmax(700px, auto);
   grid-template-areas:
     "egg"
     "transform"
@@ -232,7 +231,7 @@ TO DO:
 }
 
 .testimonials-heading {
-  margin: auto;
+  margin: 2rem auto;
   color: hsl(210, 4%, 67%);
   font-size: 1.3rem;
   letter-spacing: 0.3ch;
@@ -341,7 +340,7 @@ a {
 }
 
 .p {
-  width: 75%;
+  width: 65%;
   margin: auto;
 }
 
@@ -394,7 +393,7 @@ a {
             MEDIA QUERIES
 ===================================== */
 
-@media (min-width: 1070px) {
+@media (min-width: 1000px) {
   .hidden {
     display: block;
   }
