@@ -1,13 +1,12 @@
 /*
 TO DO: 
 
-    minMax values for txt grid items 
+    Alignment on wider screen - cherry/orange txt
     Responsiveness of nav - calc()? 
     Re-factor 
-    Alignment on wider screen - cherry/orange txt + testimonials imgs
     Background ims on mobile 
     Border bottom style for links in <main>
-    Mobile nav - start off invisible when return to smaller screen size from wider 
+    Mobile nav - start off invisible when return to smaller screen size from wider | functionality - esc key to exit 
     Accessibility for SVG 
 
 */
@@ -39,16 +38,13 @@ TO DO:
 
 .grid-container {
   min-height: 100vh;
-  grid-template-rows: 430px 1fr 240px;
-  border: 1px solid black;
-}
-
-.grid-item {
-  /* outline: 1px solid black; */
+  grid-template-rows: minmax(430px, auto) 1fr minmax(240px, auto);
 }
 
 .main {
-  grid-template-rows: repeat(4, 400px) repeat(2, 500px) 1fr 520px;
+  grid-template-rows:
+    repeat(4, minMax(400px, auto)) repeat(2, minMax(500px, auto))
+    1fr minmax(520px, auto);
   grid-template-areas:
     "egg"
     "transform"
@@ -64,10 +60,6 @@ TO DO:
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-area: images;
-}
-
-.images > * {
-  /* outline: 1px solid black; */
 }
 
 /* ====================
@@ -224,10 +216,10 @@ TO DO:
 .testimonials,
 .testimonials-content {
   display: flex;
-  flex-direction: column;
 }
 
 .testimonials {
+  flex-direction: column;
   justify-content: center;
   padding: 3rem 0 2rem 0;
   text-align: center;
@@ -242,24 +234,23 @@ TO DO:
 }
 
 .testimonials-content {
+  flex-wrap: wrap;
   margin: 3rem 0;
+  outline: 1px solid;
 }
 
 .testimonials-article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
+  flex: 1 390px;
   outline: 1px solid;
-}
-
-.testimonials-article:not(:last-child) {
-  margin-bottom: 2.5rem;
 }
 
 .profile-img {
   border-radius: 50%;
-  margin-bottom: auto;
+  margin-bottom: 1rem;
+  max-width: 25%;
 }
 
 .testimonials-content p {
@@ -407,11 +398,11 @@ a {
   }
 
   .grid-container {
-    grid-template-rows: 650px 1fr 240px;
+    grid-template-rows: minmax(650px, auto) 1fr minmax(240px, auto);
   }
 
   .main {
-    grid-template-rows: repeat(3, 500px) 1fr 500px;
+    grid-template-rows: repeat(3, minMax(500px, auto)) 1fr minmax(500px, auto);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "transform egg"
@@ -500,25 +491,7 @@ a {
   }
 
   .testimonials {
-    padding: 5rem 0 2rem 0;
-  }
-
-  .testimonials-content {
-    flex-direction: row;
-  }
-
-  .testimonials-article:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .profile-img {
-    width: 25%;
-  }
-
-  .testimonials p {
-    max-width: 70%;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 4rem 3rem;
   }
 
   .images {
