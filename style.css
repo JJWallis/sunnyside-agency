@@ -320,9 +320,9 @@ TO DO:
   margin-right: 1rem;
 }
 
-/* =================
-REPETTITIVE STYLES
-================== */
+/* ======================================
+          REPETTITIVE STYLES
+========================================= */
 a {
   text-decoration: none;
 }
@@ -353,9 +353,9 @@ a {
   font-family: Fraunces;
 }
 
-/* ============
-  ELEMENT STATE 
-=============== */
+/* =====================================
+              ELEMENT STATE 
+======================================== */
 
 .main-nav-ul a:hover {
   color: black;
@@ -386,9 +386,9 @@ a {
   cursor: pointer;
 }
 
-/* ===============
-MEDIA QUERIES
- ================*/
+/* ==================================
+            MEDIA QUERIES
+===================================== */
 
 @media (min-width: 1000px) {
   .grid-container {
@@ -433,6 +433,10 @@ MEDIA QUERIES
     background-color: white;
     color: black;
     font-weight: bold;
+  }
+
+  .main-nav-ul a:hover {
+    color: white;
   }
 
   .contact-btn:hover {
