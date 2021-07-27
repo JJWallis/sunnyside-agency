@@ -1,14 +1,14 @@
 /*
 TO DO: 
 
-    Re-factor - images doesnt need to be a grid container 
-    Mobile nav bug 
-    Background ims on mobile 
     minMax values for txt grid items 
-    Border bottom style for links in <main>
     Responsiveness of nav - calc()? 
+    Re-factor 
+    Alignment on wider screen - cherry/orange txt + testimonials imgs
+    Background ims on mobile 
+    Border bottom style for links in <main>
+    Mobile nav - start off invisible when return to smaller screen size from wider 
     Accessibility for SVG 
-    Testimonials container - flex for mobille too
 
 */
 
@@ -22,9 +22,9 @@ TO DO:
   font: normal 18px/1.5 "Barlow", "Fraunces", sans-serif;
 }
 
-/* =================
-        LAYOUT
-===================*/
+/* =================================
+                LAYOUT
+==================================== */
 
 .grid-container,
 .main,
@@ -86,7 +86,6 @@ TO DO:
 }
 
 .main-nav {
-  display: none;
   background-color: white;
   text-align: center;
   border-radius: 10px;
@@ -246,13 +245,21 @@ TO DO:
   margin: 3rem 0;
 }
 
+.testimonials-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  outline: 1px solid;
+}
+
 .testimonials-article:not(:last-child) {
   margin-bottom: 2.5rem;
 }
 
 .profile-img {
   border-radius: 50%;
-  margin-bottom: 2rem;
+  margin-bottom: auto;
 }
 
 .testimonials-content p {
@@ -357,6 +364,10 @@ a {
               ELEMENT STATE 
 ======================================== */
 
+.hidden {
+  display: none;
+}
+
 .main-nav-ul a:hover {
   color: black;
   text-decoration: underline;
@@ -391,6 +402,10 @@ a {
 ===================================== */
 
 @media (min-width: 1000px) {
+  .hidden {
+    display: block;
+  }
+
   .grid-container {
     grid-template-rows: 650px 1fr 240px;
   }
@@ -490,13 +505,6 @@ a {
 
   .testimonials-content {
     flex-direction: row;
-  }
-
-  .testimonials-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
   }
 
   .testimonials-article:not(:last-child) {
