@@ -3,7 +3,7 @@ TO DO:
 
     Re-factor 
     Convert layout to flexible grid repeat track value 
-    minMax values for txt grid items
+    minMax values for txt grid items 
     Border bottom style for links in <main>
     Responsiveness of nav - calc()? 
     Accessibility for SVG 
@@ -84,6 +84,7 @@ TO DO:
 }
 
 .main-nav {
+  display: none;
   background-color: white;
   text-align: center;
   border-radius: 10px;
@@ -354,10 +355,6 @@ a {
   ELEMENT STATE 
 =============== */
 
-.hidden {
-  display: none;
-}
-
 .main-nav-ul a:hover {
   color: black;
   text-decoration: underline;
@@ -384,4 +381,11 @@ a {
 .social-icons:hover {
   fill: white;
   cursor: pointer;
+}
+
+/* ===============
+MEDIA QUERIES
+ ================*/
+
+@media (min-width: 1000px) {
 }
