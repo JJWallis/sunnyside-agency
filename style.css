@@ -1,8 +1,8 @@
 /*
 TO DO: 
 
+    Re-factor 
     Convert layout to flexible grid repeat track value 
-    Grid template areas for wider layout 
     minMax values for txt grid items
     Border bottom style for links in <main>
     Responsiveness of nav - calc()? 
@@ -47,11 +47,21 @@ TO DO:
 
 .main {
   grid-template-rows: repeat(4, 400px) repeat(2, 500px) 1fr 520px;
+  grid-template-areas:
+    "egg"
+    "transform"
+    "wine"
+    "standout"
+    "cherry"
+    "orange"
+    "testimonials"
+    "images";
 }
 
 .images {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-area: images;
 }
 
 .images > * {
@@ -129,6 +139,15 @@ TO DO:
 .egg {
   background: yellow url("/images/mobile/image-transform.jpg") no-repeat center;
   background-size: cover;
+  grid-area: egg;
+}
+
+.transform {
+  grid-area: transform;
+}
+
+.standout {
+  grid-area: standout;
 }
 
 .transform,
@@ -165,18 +184,21 @@ TO DO:
   background: rgba(253, 122, 104) url("/images/mobile/image-stand-out.jpg")
     no-repeat center;
   background-size: cover;
+  grid-area: wine;
 }
 
 .cherry {
   background: lightseagreen url("/images/desktop/image-graphic-design.jpg")
     no-repeat center;
   background-size: cover;
+  grid-area: cherry;
 }
 
 .orange {
   background: lightskyblue url("/images/desktop/image-photography.jpg")
     no-repeat center;
   background-size: cover;
+  grid-area: orange;
 }
 
 .cherry,
@@ -207,6 +229,7 @@ TO DO:
   justify-content: center;
   padding: 3rem 0 2rem 0;
   text-align: center;
+  grid-area: testimonials;
 }
 
 .testimonials-heading {
