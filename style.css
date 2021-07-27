@@ -1,13 +1,14 @@
 /*
 TO DO: 
 
-    Mobile nav bug 
     Re-factor - images doesnt need to be a grid container 
-    Convert layout to flexible grid repeat track value 
+    Mobile nav bug 
+    Background ims on mobile 
     minMax values for txt grid items 
     Border bottom style for links in <main>
     Responsiveness of nav - calc()? 
     Accessibility for SVG 
+    Testimonials container - flex for mobille too
 
 */
 
@@ -43,7 +44,7 @@ TO DO:
 }
 
 .grid-item {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 .main {
@@ -66,7 +67,7 @@ TO DO:
 }
 
 .images > * {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 /* ====================
@@ -377,6 +378,7 @@ a {
 
 .footer a:hover {
   color: white;
+  font-weight: bold;
 }
 
 .social-icons:hover {
@@ -433,6 +435,11 @@ MEDIA QUERIES
     font-weight: bold;
   }
 
+  .contact-btn:hover {
+    background-color: #66beff;
+    color: white;
+  }
+
   .title-container {
     margin-top: 5rem;
   }
@@ -473,6 +480,10 @@ MEDIA QUERIES
     width: 60%;
   }
 
+  .testimonials {
+    padding: 5rem 0 2rem 0;
+  }
+
   .testimonials-content {
     flex-direction: row;
   }
@@ -494,5 +505,12 @@ MEDIA QUERIES
 
   .testimonials p {
     max-width: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .images {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
 }
