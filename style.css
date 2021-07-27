@@ -1,7 +1,8 @@
 /*
 TO DO: 
 
-    Re-factor 
+    Mobile nav bug 
+    Re-factor - images doesnt need to be a grid container 
     Convert layout to flexible grid repeat track value 
     minMax values for txt grid items 
     Border bottom style for links in <main>
@@ -388,4 +389,110 @@ MEDIA QUERIES
  ================*/
 
 @media (min-width: 1000px) {
+  .grid-container {
+    grid-template-rows: 650px 1fr 240px;
+  }
+
+  .main {
+    grid-template-rows: repeat(3, 500px) 1fr 500px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "transform egg"
+      "wine standout"
+      "cherry orange"
+      "testimonials testimonials"
+      "images images";
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    position: static;
+    background-color: transparent;
+  }
+
+  .main-nav ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav-ul a {
+    padding: 0;
+    margin-right: 2rem;
+    color: white;
+    font-weight: bolder;
+  }
+
+  .contact-btn {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+  }
+
+  .title-container {
+    margin-top: 5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .arrow {
+    margin-top: 3.5rem;
+  }
+
+  .transform,
+  .standout,
+  .transform section,
+  .standout section {
+    text-align: left;
+  }
+
+  .transform section,
+  .standout section {
+    width: 70%;
+  }
+
+  .h2,
+  .transform p,
+  .standout p {
+    margin: 1rem 0;
+    width: 90%;
+  }
+
+  .h2 {
+    font-size: 2rem;
+  }
+
+  .cherry p,
+  .orange p {
+    width: 60%;
+  }
+
+  .testimonials-content {
+    flex-direction: row;
+  }
+
+  .testimonials-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .testimonials-article:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .profile-img {
+    width: 25%;
+  }
+
+  .testimonials p {
+    max-width: 70%;
+  }
 }
