@@ -2,11 +2,10 @@
 TO DO: 
 
     Re-factor 
-    Responsiveness of nav - calc()? 
     Background ims on mobile 
     Border bottom style for links in <main>
-    Mobile nav - start off invisible when return to smaller screen size from wider 
     Accessibility for SVG 
+    Mobile nav - start off invisible when return to smaller screen size from wider 
 
 */
 
@@ -80,9 +79,10 @@ TO DO:
   background-color: white;
   text-align: center;
   border-radius: 10px;
-  position: absolute;
-  top: 17%;
-  left: 16%;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-nav-ul,
@@ -421,6 +421,7 @@ a {
     display: block;
     position: static;
     background-color: transparent;
+    transform: none;
   }
 
   .main-nav ul {
