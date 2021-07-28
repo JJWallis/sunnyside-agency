@@ -1,12 +1,9 @@
 /*
 TO DO: 
-
     Re-factor 
-    Background ims on mobile 
+    Scaling font size
     Border bottom style for links in <main>
-    Accessibility for SVG 
     Mobile nav - start off invisible when return to smaller screen size from wider 
-
 */
 
 *,
@@ -130,7 +127,8 @@ TO DO:
 }
 
 .egg {
-  background: yellow url("/images/mobile/image-transform.jpg") no-repeat center;
+  background: yellow url("/images/mobile/image-transform.jpg") no-repeat center
+    40%;
   background-size: cover;
   grid-area: egg;
 }
@@ -175,21 +173,21 @@ TO DO:
 
 .wine {
   background: rgba(253, 122, 104) url("/images/mobile/image-stand-out.jpg")
-    no-repeat center;
+    no-repeat center 45%;
   background-size: cover;
   grid-area: wine;
 }
 
 .cherry {
   background: lightseagreen url("/images/desktop/image-graphic-design.jpg")
-    no-repeat center;
+    no-repeat center 0%;
   background-size: cover;
   grid-area: cherry;
 }
 
 .orange {
   background: lightskyblue url("/images/desktop/image-photography.jpg")
-    no-repeat center;
+    no-repeat center 0%;
   background-size: cover;
   grid-area: orange;
 }
@@ -199,7 +197,7 @@ TO DO:
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 0.7rem;
 }
 
 .cherry section,
@@ -212,7 +210,6 @@ TO DO:
 }
 
 .h3 {
-  margin-top: auto;
   font-size: 1.5rem;
   color: hsl(167, 40%, 24%);
 }
@@ -246,7 +243,7 @@ TO DO:
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1 390px;
+  flex: 1 370px;
 }
 
 .profile-img {
@@ -393,7 +390,7 @@ a {
             MEDIA QUERIES
 ===================================== */
 
-@media (min-width: 1000px) {
+@media (min-width: 57rem) {
   .hidden {
     display: block;
   }
