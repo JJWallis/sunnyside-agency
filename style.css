@@ -58,14 +58,13 @@ TO DO:
   grid-area: images;
 }
 
-/* ====================
-        ITEMS 
-======================*/
+/* ============================
+      MOBILE + GENERAL STYLES
+=============================== */
 .header {
   padding: 1rem;
   background: lightblue url("/images/desktop/image-header.jpg") no-repeat center;
   background-size: cover;
-  position: relative;
 }
 
 .nav-logo-container {
@@ -83,24 +82,13 @@ TO DO:
   transform: translate(-50%, -50%);
 }
 
-.main-nav-ul,
-.footer-nav-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav-ul li,
-.footer-nav-ul li {
-  list-style-type: none;
-}
-
-.main-nav-ul a,
-.footer-nav-ul a {
+.main-nav a,
+.footer-nav a {
   display: block;
   color: hsl(213, 9%, 39%);
 }
 
-.main-nav-ul a {
+.main-nav a {
   padding: 1.5rem 9rem;
 }
 
@@ -151,25 +139,21 @@ TO DO:
   text-align: center;
 }
 
-.transform section,
-.standout section,
-.cherry section,
-.orange section {
+.egg-orange-content {
   width: 80%;
   text-align: center;
 }
 
-.h2 {
-  width: 70%;
-  margin: 1rem auto;
+.learn-more {
+  border-bottom: 5px solid;
 }
 
 .transform a {
-  border-bottom: 5px solid rgba(255, 232, 102, 0.6);
+  border-color: rgba(255, 232, 102, 0.6);
 }
 
 .standout a {
-  border-bottom: 5px solid rgba(253, 122, 104, 0.6);
+  border-color: rgba(253, 122, 104, 0.6);
 }
 
 .wine {
@@ -201,8 +185,7 @@ TO DO:
   padding-bottom: 0.7rem;
 }
 
-.cherry section,
-.orange section {
+.cherry-orange-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,8 +288,8 @@ TO DO:
   display: flex;
 }
 
-.footer-nav li {
-  margin: 0 2rem;
+.footer-nav a {
+  padding: 0 2rem;
 }
 
 .social-media {
@@ -324,12 +307,31 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 .main a {
   display: inline-block;
   margin-top: 2rem;
   border-radius: 5px;
   color: black;
   font-weight: 900;
+}
+
+.h2 {
+  width: 70%;
+  margin: 1rem auto;
 }
 
 .uppercase {
