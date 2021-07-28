@@ -1,6 +1,5 @@
 /*
 TO DO: 
-    Re-factor 
     Border bottom style for links in <main>
     Mobile nav - style + start off invisible when return to smaller screen size from wider 
     Font-sizing 
@@ -266,7 +265,7 @@ TO DO:
 }
 
 .social-icons-wrapper {
-  margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 /* ======================================
@@ -302,11 +301,6 @@ ul {
   font-weight: 900;
 }
 
-.h2 {
-  width: 70%;
-  margin: 1rem auto;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -315,16 +309,17 @@ ul {
   text-align: center;
 }
 
+.h2 {
+  width: 70%;
+  margin: 1rem auto;
+}
+
 .p {
   width: 65%;
   margin: auto;
 }
 
-.title,
-.h2,
-.h3,
-.testimonials-heading,
-.name {
+.fraunces {
   font-family: Fraunces;
 }
 
@@ -336,23 +331,22 @@ ul {
   display: none;
 }
 
-.main-nav-ul a:hover {
-  color: black;
+.main-nav a:hover {
   text-decoration: underline;
 }
 
 .contact-btn:hover {
   background-color: hsl(213, 9%, 39%);
   color: hsl(51, 100%, 49%);
-  transition: 500ms;
+  transition: 400ms;
 }
 
 .transform a:hover {
-  border-bottom: 5px solid rgba(255, 232, 102);
+  border-color: rgba(255, 232, 102);
 }
 
 .standout a:hover {
-  border-bottom: 5px solid rgba(253, 122, 104);
+  border-color: rgba(253, 122, 104);
 }
 
 .footer a:hover {
@@ -370,10 +364,6 @@ ul {
 ===================================== */
 
 @media (min-width: 57rem) {
-  .hidden {
-    display: block;
-  }
-
   .grid-container {
     grid-template-rows: minmax(650px, auto) 1fr minmax(240px, auto);
   }
@@ -389,26 +379,33 @@ ul {
       "images images";
   }
 
+  .hidden {
+    display: block;
+  }
+
   .hamburger {
     display: none;
   }
 
   .main-nav {
-    display: block;
     position: static;
-    background-color: transparent;
     transform: none;
+    background-color: transparent;
   }
 
   .main-nav-ul {
     display: flex;
   }
 
-  .main-nav-ul a {
+  .main-nav a {
     padding: 0;
     margin-right: 2rem;
     color: white;
     font-weight: bolder;
+  }
+
+  .main-nav a:hover {
+    color: white;
   }
 
   .contact-btn {
@@ -416,10 +413,6 @@ ul {
     background-color: white;
     color: black;
     font-weight: bold;
-  }
-
-  .main-nav-ul a:hover {
-    color: white;
   }
 
   .contact-btn:hover {
@@ -439,26 +432,15 @@ ul {
     margin-top: 3.5rem;
   }
 
-  .transform,
-  .standout,
   .transform section,
   .standout section {
     text-align: left;
-  }
-
-  .transform section,
-  .standout section {
     width: 70%;
   }
 
-  .h2,
-  .transform p,
-  .standout p {
-    margin: 1rem 0;
-    width: 90%;
-  }
-
   .h2 {
+    width: 90%;
+    margin: 1rem 0;
     font-size: 2rem;
   }
 
@@ -466,8 +448,7 @@ ul {
     width: 100%;
   }
 
-  .cherry section,
-  .orange section {
+  .cherry-orange-content {
     min-width: 390px;
     max-width: 400px;
   }
