@@ -73,7 +73,6 @@ TO DO:
 
 .main-nav {
   background-color: white;
-  text-align: center;
   border-radius: 10px;
   position: fixed;
   top: 25%;
@@ -105,7 +104,6 @@ TO DO:
   color: white;
   font-size: 2rem;
   font-weight: 900;
-  text-align: center;
   letter-spacing: 0.4ch;
 }
 
@@ -133,12 +131,10 @@ TO DO:
 .standout {
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .egg-orange-content {
   width: 80%;
-  text-align: center;
 }
 
 .learn-more {
@@ -194,7 +190,6 @@ TO DO:
 .testimonials {
   justify-content: center;
   padding: 3rem 0 2rem 0;
-  text-align: center;
   grid-area: testimonials;
 }
 
@@ -315,6 +310,10 @@ ul {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
 }
 
 .p {
