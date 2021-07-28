@@ -2,7 +2,9 @@
 TO DO: 
     Re-factor 
     Border bottom style for links in <main>
-    Mobile nav - start off invisible when return to smaller screen size from wider 
+    Mobile nav - style + start off invisible when return to smaller screen size from wider 
+    Font-sizing 
+    Background images 
 */
 
 *,
@@ -248,7 +250,6 @@ TO DO:
 .profile-img {
   border-radius: 50%;
   margin-bottom: 1rem;
-  max-width: 25%;
 }
 
 .testimonials-content p {
