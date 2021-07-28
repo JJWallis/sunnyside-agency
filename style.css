@@ -130,7 +130,6 @@ TO DO:
 .transform,
 .standout {
   justify-content: center;
-  align-items: center;
 }
 
 .egg-orange-content {
@@ -172,13 +171,11 @@ TO DO:
 
 .cherry,
 .orange {
-  align-items: center;
   padding-bottom: 0.7rem;
 }
 
 .cherry-orange-content {
   justify-content: center;
-  align-items: center;
   margin-top: auto;
 }
 
@@ -206,7 +203,6 @@ TO DO:
 }
 
 .testimonials-article {
-  align-items: center;
   flex: 1 370px;
 }
 
@@ -259,7 +255,6 @@ TO DO:
 
 .footer {
   background-color: #83cbbd;
-  align-items: center;
 }
 
 .footer-nav a {
@@ -293,6 +288,10 @@ ul {
 
 .flex-column {
   flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .main a {
@@ -403,7 +402,6 @@ ul {
 
   .main-nav-ul {
     display: flex;
-    align-items: center;
   }
 
   .main-nav-ul a {
