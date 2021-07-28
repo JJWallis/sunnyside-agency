@@ -1,7 +1,6 @@
 /*
 TO DO: 
     Re-factor 
-    Scaling font size
     Border bottom style for links in <main>
     Mobile nav - start off invisible when return to smaller screen size from wider 
 */
@@ -180,14 +179,14 @@ TO DO:
 
 .cherry {
   background: lightseagreen url("/images/desktop/image-graphic-design.jpg")
-    no-repeat center 0%;
+    no-repeat center 10%;
   background-size: cover;
   grid-area: cherry;
 }
 
 .orange {
   background: lightskyblue url("/images/desktop/image-photography.jpg")
-    no-repeat center 0%;
+    no-repeat center 10%;
   background-size: cover;
   grid-area: orange;
 }
@@ -272,13 +271,13 @@ TO DO:
 
 .milk {
   background: lightblue url("/images/desktop/image-gallery-milkbottles.jpg")
-    no-repeat center;
+    no-repeat center 100%;
   background-size: cover;
 }
 
 .orange-half {
   background: orange url("/images/desktop/image-gallery-orange.jpg") no-repeat
-    center;
+    0% 0%;
   background-size: cover;
 }
 
@@ -290,7 +289,7 @@ TO DO:
 
 .sugar-cubes {
   background: lightblue url("/images/desktop/image-gallery-sugarcubes.jpg")
-    no-repeat center;
+    no-repeat 0% 40%;
   background-size: cover;
 }
 
@@ -400,7 +399,7 @@ a {
   }
 
   .main {
-    grid-template-rows: repeat(3, minMax(500px, auto)) 1fr minmax(500px, auto);
+    grid-template-rows: repeat(3, minMax(500px, auto)) 1fr minmax(700px, auto);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "transform egg"
@@ -488,17 +487,36 @@ a {
     width: 100%;
   }
 
-  .cherry p,
-  .orange p {
+  .cherry section,
+  .orange section {
+    min-width: 390px;
     max-width: 400px;
+  }
+
+  .orange {
+    background-position: center 10%;
   }
 
   .testimonials {
     padding: 4rem 3rem;
   }
+}
+
+@media (min-width: 67rem) {
+  .main {
+    grid-template-rows: repeat(3, minMax(500px, auto)) 1fr minmax(500px, auto);
+  }
 
   .images {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+  }
+
+  .orange-half {
+    background-position: 55% 0%;
+  }
+
+  .sugar-cubes {
+    background-position: 80% 40%;
   }
 }
