@@ -1,8 +1,13 @@
-/*
+/* 
   TO DO: 
-    Border bottom style for links in <main>
-    Mobile nav - style + start off invisible when return to smaller screen size from wider 
-*/
+
+  Wrap hamburger icon in <button> vs <a> 
+  Mobile nav positioning 
+  Accessible background images + scaled differently with <img> 
+  <picture> + <source> = cherry + orange section 
+  Hover target for social media icons - non stutory 
+
+  */
 
 *,
 *::before,
@@ -31,13 +36,17 @@
 
 .grid-container {
   min-height: 100vh;
-  grid-template-rows: minmax(430px, auto) 1fr minmax(240px, auto);
+  grid-template-rows: minmax(500px, auto) 1fr minmax(240px, auto);
 }
 
 .main {
   grid-template-rows:
-    repeat(4, minMax(400px, auto)) repeat(2, minMax(500px, auto))
-    1fr minmax(700px, auto);
+    minmax(500px, auto) minmax(300px, auto) minmax(500px, auto) minmax(
+      300px,
+      auto
+    )
+    repeat(2, minMax(370px, auto))
+    1fr minmax(430px, auto);
   grid-template-areas:
     "egg"
     "transform"
@@ -127,22 +136,7 @@
 .transform,
 .standout {
   justify-content: center;
-}
-
-.egg-orange-content {
-  width: 80%;
-}
-
-.learn-more {
-  border-bottom: 5px solid;
-}
-
-.transform a {
-  border-color: rgba(255, 232, 102, 0.6);
-}
-
-.standout a {
-  border-color: rgba(253, 122, 104, 0.6);
+  padding: 2.4rem 1rem;
 }
 
 .wine {
@@ -168,7 +162,7 @@
 
 .cherry,
 .orange {
-  padding-bottom: 0.7rem;
+  padding: 0 1rem 0.7rem;
 }
 
 .cherry-orange-content {
@@ -209,7 +203,7 @@
 }
 
 .testimonials-content p {
-  width: 60%;
+  width: 80%;
 }
 
 .name,
@@ -308,13 +302,13 @@ ul {
 }
 
 .h2 {
-  width: 70%;
   margin: 1rem auto;
+  font-size: 1.7rem;
 }
 
 .p {
-  width: 65%;
   margin: auto;
+  max-width: 460px;
 }
 
 .fraunces {
@@ -339,12 +333,29 @@ ul {
   transition: 400ms;
 }
 
-.transform a:hover {
-  border-color: rgba(255, 232, 102);
+.learn-more::after {
+  content: "";
+  display: block;
+  margin-top: -9px;
+  width: 120px;
+  height: 10px;
+  border-radius: 10px;
 }
 
-.standout a:hover {
-  border-color: rgba(253, 122, 104);
+.transform a::after {
+  background-color: rgba(255, 232, 102, 0.6);
+}
+
+.standout a::after {
+  background-color: rgba(253, 122, 104, 0.6);
+}
+
+.transform a:hover::after {
+  background-color: rgba(255, 232, 102);
+}
+
+.standout a:hover::after {
+  background-color: rgba(253, 122, 104);
 }
 
 .footer a:hover {
@@ -437,18 +448,12 @@ ul {
   }
 
   .h2 {
-    width: 90%;
     margin: 1rem 0;
     font-size: 2rem;
   }
 
   .p {
     width: 100%;
-  }
-
-  .cherry-orange-content {
-    min-width: 390px;
-    max-width: 400px;
   }
 
   .orange {
