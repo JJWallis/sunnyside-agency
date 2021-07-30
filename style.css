@@ -3,9 +3,10 @@
 
   Wrap hamburger icon in <button> vs <a> 
   Mobile nav positioning 
-  Accessible background images + scaled differently with <img> 
+  Accessible background images  
   <picture> + <source> = cherry + orange section 
   Hover target for social media icons - non stutory 
+  BEM 
 
   */
 
@@ -41,11 +42,8 @@
 
 .main {
   grid-template-rows:
-    minmax(500px, auto) minmax(300px, auto) minmax(500px, auto) minmax(
-      300px,
-      auto
-    )
-    repeat(2, minMax(370px, auto))
+    auto minmax(300px, auto) auto minmax(300px, auto)
+    auto auto
     1fr minmax(430px, auto);
   grid-template-areas:
     "egg"
@@ -119,9 +117,6 @@
 }
 
 .egg {
-  background: yellow url("/images/mobile/image-transform.jpg") no-repeat center
-    40%;
-  background-size: cover;
   grid-area: egg;
 }
 
@@ -136,21 +131,22 @@
 .transform,
 .standout {
   justify-content: center;
-  padding: 2.4rem 1rem;
+  padding: 0.5rem 1rem 2.4rem;
 }
 
 .wine {
-  background: rgba(253, 122, 104) url("/images/mobile/image-stand-out.jpg")
-    no-repeat center 45%;
-  background-size: cover;
   grid-area: wine;
 }
 
 .cherry {
-  background: lightseagreen url("/images/desktop/image-graphic-design.jpg")
-    no-repeat center 10%;
-  background-size: cover;
   grid-area: cherry;
+}
+
+.cherry img,
+.orange img,
+.wine img,
+.egg img {
+  width: 100%;
 }
 
 .orange {
@@ -158,11 +154,6 @@
     no-repeat center 10%;
   background-size: cover;
   grid-area: orange;
-}
-
-.cherry,
-.orange {
-  padding: 0 1rem 0.7rem;
 }
 
 .cherry-orange-content {
