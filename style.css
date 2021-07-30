@@ -3,12 +3,12 @@
 
   Wrap hamburger icon in <button> vs <a> 
   Mobile nav positioning 
-  Accessible background images  
+  Accessible background images 
   <picture> + <source> = cherry + orange section 
   Hover target for social media icons - non stutory 
   BEM 
 
-  */
+*/
 
 *,
 *::before,
@@ -43,7 +43,7 @@
 .main {
   grid-template-rows:
     auto minmax(300px, auto) auto minmax(300px, auto)
-    auto auto
+    repeat(2, auto)
     1fr minmax(430px, auto);
   grid-template-areas:
     "egg"
@@ -138,10 +138,6 @@
   grid-area: wine;
 }
 
-.cherry {
-  grid-area: cherry;
-}
-
 .cherry img,
 .orange img,
 .wine img,
@@ -149,21 +145,39 @@
   width: 100%;
 }
 
+.cherry {
+  grid-area: cherry;
+}
+
 .orange {
-  background: lightskyblue url("/images/desktop/image-photography.jpg")
-    no-repeat center 10%;
-  background-size: cover;
+  margin-top: -7px;
   grid-area: orange;
 }
 
-.cherry-orange-content {
-  justify-content: center;
-  margin-top: auto;
+.cherry,
+.orange {
+  position: relative;
+}
+
+.cherry section,
+.orange section {
+  text-align: center;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.cherry p,
+.orange p {
+  font-size: 0.8rem;
 }
 
 .h3 {
   font-size: 1.5rem;
   color: hsl(167, 40%, 24%);
+  margin-top: 0;
 }
 
 .testimonials {
