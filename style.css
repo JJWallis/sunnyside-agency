@@ -1,7 +1,9 @@
 /* 
   TO DO: 
 
-  Hover target for social media icons - non-static 
+  Revert to Friday End commit - find scroll bars bug
+  Scaling font-sizes for cherry/orange 
+  
 
 */
 
@@ -112,7 +114,7 @@ body,
 }
 
 .main-nav a {
-  padding: 1.5rem 8rem;
+  padding: 1.5rem 1rem;
 }
 
 .contact-btn {
@@ -434,7 +436,7 @@ ul {
     background-color: transparent;
   }
 
-  .main-nav::after {
+  .main-nav::before {
     display: none;
   }
 
