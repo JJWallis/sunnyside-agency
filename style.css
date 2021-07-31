@@ -1,8 +1,6 @@
 /* 
   TO DO: 
 
-  Mobile nav positioning 
-  <picture> - cherry + orange section 
   Hover target for social media icons - non-static 
 
 */
@@ -15,6 +13,12 @@
 
 :root {
   font: normal 18px/1.5 "Barlow", "Fraunces", sans-serif;
+}
+
+body,
+.grid-container,
+.main {
+  overflow-x: hidden;
 }
 
 /* =================================
@@ -81,12 +85,24 @@
 }
 
 .main-nav {
-  background-color: white;
-  border-radius: 10px;
-  position: fixed;
-  top: 25%;
+  width: 90%;
+  position: absolute;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.main-nav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -25px;
+  background-color: white;
+  height: 27px;
+  width: 27px;
+  clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
 }
 
 .main-nav a,
@@ -96,7 +112,7 @@
 }
 
 .main-nav a {
-  padding: 1.5rem 9rem;
+  padding: 1.5rem 8rem;
 }
 
 .contact-btn {
@@ -208,6 +224,7 @@
 }
 
 .profile-img {
+  width: 70px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
@@ -411,9 +428,14 @@ ul {
   }
 
   .main-nav {
+    width: unset;
     position: static;
     transform: none;
     background-color: transparent;
+  }
+
+  .main-nav::after {
+    display: none;
   }
 
   .main-nav-ul {
