@@ -36,7 +36,7 @@ body,
 
 .main {
   grid-template-rows:
-    auto minmax(300px, auto) auto minmax(300px, auto)
+    minmax(300px, auto) minmax(300px, auto) auto minmax(300px, auto)
     repeat(2, auto)
     1fr minmax(460px, auto);
   grid-template-areas:
@@ -131,6 +131,9 @@ body,
 }
 
 .egg {
+  background: yellow url("/images/desktop/image-transform.jpg") no-repeat center
+    40%;
+  background-size: 100%;
   grid-area: egg;
 }
 
@@ -156,7 +159,8 @@ body,
 .orange img,
 .wine img,
 .egg img {
-  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 .cherry {
