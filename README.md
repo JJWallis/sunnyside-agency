@@ -49,6 +49,7 @@ Your users should be able to:
 <a href="/" aria-label="Sunnyside logo"
    ><img src="/images/logo.svg" alt="Sunnyside logo" class="logo-header"
 /></a>
+
 <button type="button" class="hamburger-btn">
    <img
       src="/images/icon-hamburger.svg"
@@ -60,16 +61,7 @@ Your users should be able to:
 </button>
 ```
 
-```css
-.main-nav {
-   transform: translate(-50%, -50%);
-   /* 1st encounter - CSS tricks + fluid 90% width on nav  */
-}
-```
-
-1st major junior project - big step up
-
-Mobile nav - first time with hamburger + interactive wrappers for targetting | `aria-label` - no text-content
+This project was my first time building a navigation for both mobile and wider viewports, therefore introducing a hamgburger icon to toggle that mobile navigation whilst rendering it invisible on larger screens. I quickly learned the importance of making such a toggle accessible by wrapping it in a `<button>` with an `aria-label` attribute, to provide additional context for interactive elements (links or buttons) housing no text content.
 
 ```css
 main {
