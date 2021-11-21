@@ -60,9 +60,16 @@ Your users should be able to:
 </button>
 ```
 
+```css
+.main-nav {
+   transform: translate(-50%, -50%);
+   /* 1st encounter - CSS tricks + fluid 90% width on nav  */
+}
+```
+
 1st major junior project - big step up
 
-Mobile nav - first time with hamburger + diff style of nav | fluid 90% width | 100% width on links for greater touch targets vs padding on container
+Mobile nav - first time with hamburger + interactive wrappers for targetting | `aria-label` - no text-content
 
 ```css
 main {
@@ -72,16 +79,41 @@ main {
       1fr minmax(460px, auto);
    grid-template-areas: ...;
 }
+```
 
-.main-nav {
-   transform: translate(-50%, -50%);
-   /* 1st encounter - CSS tricks */
-}
+Grid layout - whole site layout (1st time) | minmax(...px, auto) - same as min-height + keeping default height: auto | tested by adding more content | made changing layout very easy - didnt use grid-areas 1st time (re-factored + very thankful I did so!)
 
+```css
 .main-nav::before {
    clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
 }
 ```
+
+Clip-path - to create shape | better to use online tool + limited-ish browser support
+
+```css
+.cherry img,
+.orange img,
+.wine img,
+.egg img {
+   max-width: 100%;
+   display: block;
+}
+```
+
+Images - hard to control | background imgs + then converted to width: 100% like solution | display: block reset not included till very late - white space between them when stacked on top of eachother
+
+Content over imgs - background overlapping with it (cover size) | solution positioned over the top + fluid img so scaled with it
+
+Px width of profile imgs - solution with fixed px vs fluid % for me (lower flex-item at wrap made massive)
+
+```css
+.sugar-cubes {
+   background-position: 0% 40%;
+}
+```
+
+Background position for 4 row imgs at bottom above footer - keeping focus point in view as much as poss (vs cover + center all the time)
 
 ```js
 const innerWidth = () => window.innerWidth
@@ -118,19 +150,3 @@ Numerous problems occured with the hover states of the social icon SVG's within 
 ## Acknowledgments
 
 I have left a copy of the solution I used within this repo. This solution was featured in an email newsletter the Front End Mentor founder sent out, due its responsiveness and great taste in animation for the mobile menu and rotating orange on scroll.
-
-CSS:
-
-Grid layout - whole site layout (1st time) | minmax(...px, auto) - same as min-height + keeping default height: auto | tested by adding more content | made changing layout very easy - didnt use grid-areas 1st time (re-factored + very thankful I did so!)
-
-Images - hard to control | background imgs + then converted to width: 100% like solution | display: block reset not included till very late - white space between them when stacked on top of eachother
-
-Content over imgs - background overlapping with it (cover size) | solution positioned over the top + fluid img so scaled with it
-
-Clip-path - to create shape | better to use online tool + limited-ish browser support
-
-Pseudo els for colour underline trick on links - increase opacity to 1 (alpha chanel of colour) on hover (1st time with effect - didn't think to use pseudo els at 1st)
-
-Px width of profile imgs - solution with fixed px vs fluid % for me (lower flex-item at wrap made massive)
-
-Background position for 4 row imgs at bottom above footer - keeping focus point in view as much as poss (vs cover + center all the time)
