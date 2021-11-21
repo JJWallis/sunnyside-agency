@@ -63,6 +63,21 @@ Your users should be able to:
 
 This project was my first time building a navigation for both mobile and wider viewports, therefore introducing a hamgburger icon to toggle that mobile navigation whilst rendering it invisible on larger screens. I quickly learned the importance of making such a toggle accessible by wrapping it in a `<button>` with an `aria-label` attribute, to provide additional context for interactive elements (links or buttons) housing no text content.
 
+```js
+const innerWidth = () => window.innerWidth
+
+header.addEventListener('click', (e) => {
+   if (innerWidth() <= 1000) {
+      if (e.target.matches('#hamburger-icon')) {
+         e.preventDefault()
+         nav.classList.toggle('hidden')
+      }
+   }
+})
+```
+
+In order to toggle the visibility and behaviour of the mobile navigation, I decided to create a Javascript media query equivalent by running a function that retrieved the viewports inner width whenever the desired event (on resize and click) was fired. This isn't particularly an efficient method to use for future projects, regardless of whether a significant number of users don't resize their browser when visiting a site.
+
 ```css
 main {
    grid-template-rows:
@@ -93,34 +108,15 @@ In order to create the triangle-like shape on top of the mobile navigation, I ha
 }
 ```
 
-Images - hard to control | background imgs + then converted to width: 100% like solution | display: block reset not included till very late - white space between them when stacked on top of eachother
-
-Content over imgs - background overlapping with it (cover size) | solution positioned over the top + fluid img so scaled with it
-
-Px width of profile imgs - solution with fixed px vs fluid % for me (lower flex-item at wrap made massive)
+All the images in this project provided a very nice challenge regarding their control, as there was such a diverse range in their design implementations. The primary images (as referenced above), when setup as background-images, caused overlapping problems with the text content that was positioned in front of them. The solution I used helped me to alleviate this issue by positioning the text over the image, and rendering the image directly in the HTML (instead of in the background via CSS).
 
 ```css
-.sugar-cubes {
-   background-position: 0% 40%;
+.profile-img {
+   width: 70px;
 }
 ```
 
-Background position for 4 row imgs at bottom above footer - keeping focus point in view as much as poss (vs cover + center all the time)
-
-```js
-const innerWidth = () => window.innerWidth
-
-header.addEventListener('click', (e) => {
-   if (innerWidth() <= 1000) {
-      if (e.target.matches('#hamburger-icon')) {
-         e.preventDefault()
-         nav.classList.toggle('hidden')
-      }
-   }
-})
-```
-
-Not efficient listening each time browser resized event (desire to change) | 1st use - JS Media query equivalent
+Furthermore, the profile images in the testimonials section were becoming too large and un-even in their sizing as the viewport size increased (especially when the last flex-child responded to fill the entire viewport width at tablet devices). Once again, the solution helped me solve this problem by applying a fixed px width to each image.
 
 ### Continued development
 
