@@ -73,7 +73,7 @@ main {
 }
 ```
 
-Grid layout - whole site layout (1st time) | minmax(...px, auto) - same as min-height + keeping default height: auto | tested by adding more content | made changing layout very easy - didnt use grid-areas 1st time (re-factored + very thankful I did so!)
+This was my first project using grid to layout the whole site, where I learnt the importance of using both px and the `auto` keyword within the `minmax()` function to create responsive containers that adapted to future content additions. When using grid-areas to control the placement of content, it makes changing the order at different breakpoints much easier and more flexible than other layout methods.
 
 ```css
 .main-nav::before {
@@ -81,7 +81,7 @@ Grid layout - whole site layout (1st time) | minmax(...px, auto) - same as min-h
 }
 ```
 
-Clip-path - to create shape | better to use online tool + limited-ish browser support
+In order to create the triangle-like shape on top of the mobile navigation, I had to learn about the `clip-path` property which allows you to create any shape desired based on a collection of set points. In practice, there are multiple useful sites that will help you generate these shapes visually via an interface similar to Adobe Photoshop, which you can then copy the CSS code from to implement into your own project.
 
 ```css
 .cherry img,
