@@ -45,6 +45,23 @@ Your users should be able to:
 
 ### What I learned
 
+```html
+<a href="/" aria-label="Sunnyside logo"
+   ><img src="/images/logo.svg" alt="Sunnyside logo" class="logo-header"
+/></a>
+<button type="button" class="hamburger-btn">
+   <img
+      src="/images/icon-hamburger.svg"
+      alt="Hamburger navigation icon"
+      id="hamburger-icon"
+      class="hamburger"
+      aria-label="Hamburger naviation icon"
+   />
+</button>
+```
+
+1st major junior project - big step up
+
 ```css
 main {
    grid-template-rows:
@@ -82,6 +99,8 @@ header.addEventListener('click', (e) => {
 
 I would like to continue using grid to create full-page layouts, as well as experimenting with other situations where currently I might not think to use it.
 
+In addition, to make the grid container and items more accessible, using a `role="grid/gridcell"` would be more favourable to provide some extra context for assistive technologies.
+
 ### Useful resources
 
 -  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This helped me with regards to centering the mobile navigation as the viewport grew wider. The `translate(50%, -50%)` vertical centering method works very nicely when positioning content, and as such will become incredibly useful for future projects.
@@ -94,14 +113,6 @@ I would like to continue using grid to create full-page layouts, as well as expe
 ## Acknowledgments
 
 I have left a copy of the solution I used within this repo. This solution was featured in an email newsletter the Front End Mentor founder sent out, due its responsiveness and great taste in animation for the mobile menu and rotating orange on scroll.
-
-###### TODO
-
-HTML:
-
-1st major junior project - big step up
-
-Future accessibility = role: grid/gridcell on <div> especially
 
 CSS:
 
