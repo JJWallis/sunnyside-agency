@@ -62,6 +62,8 @@ Your users should be able to:
 
 1st major junior project - big step up
 
+Mobile nav - first time with hamburger + diff style of nav | fluid 90% width | 100% width on links for greater touch targets vs padding on container
+
 ```css
 main {
    grid-template-rows:
@@ -92,14 +94,17 @@ header.addEventListener('click', (e) => {
       }
    }
 })
-// 1st use for mobile nav - JS Media query equivalent
 ```
+
+Not efficient listening each time browser resized event (desire to change) | 1st use - JS Media query equivalent
 
 ### Continued development
 
 I would like to continue using grid to create full-page layouts, as well as experimenting with other situations where currently I might not think to use it.
 
 In addition, to make the grid container and items more accessible, using a `role="grid/gridcell"` would be more favourable to provide some extra context for assistive technologies.
+
+Numerous problems occured with the hover states of the social icon SVG's within the footer, as the `fill` colour would not change when hovering within the gaps of the original shape. In the future, I would like to learn how to use NPM to install Font Awesome's icon package, which supposedly has greater built Javascript support to fix those hover problems.
 
 ### Useful resources
 
@@ -122,22 +127,10 @@ Images - hard to control | background imgs + then converted to width: 100% like 
 
 Content over imgs - background overlapping with it (cover size) | solution positioned over the top + fluid img so scaled with it
 
-Mobile nav - first time with hamburger + diff style of nav | fluid 90% width | 100% width on links for greater touch targets vs padding on container
-
 Clip-path - to create shape | better to use online tool + limited-ish browser support
 
-Width of text + appropiate font-size to fill space in grid-items appropiately
-
-Pseudo els for colour underline trick on links - increase opacity to 1 (alpha chanel of colour) on hover (1st time with effect)
-
-Alignment of quotes in testimonials with flex | classes applied before - debugging practice in browser
+Pseudo els for colour underline trick on links - increase opacity to 1 (alpha chanel of colour) on hover (1st time with effect - didn't think to use pseudo els at 1st)
 
 Px width of profile imgs - solution with fixed px vs fluid % for me (lower flex-item at wrap made massive)
 
-Background position for 4 row imgs at bottom above footer - keeping focus point in view as much as poss
-
-Hover issues with SVGs at bottom - fill not happening on all areas (Font Awesome NPM package solution - once know how to use NPM!)
-
-JS:
-
-Not efficient listening each time browser resized event |
+Background position for 4 row imgs at bottom above footer - keeping focus point in view as much as poss (vs cover + center all the time)
