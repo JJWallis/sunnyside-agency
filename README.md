@@ -131,7 +131,3 @@ Hover issues with SVGs at bottom - fill not happening on all areas (Font Awesome
 JS:
 
 Not efficient listening each time browser resized event |
-
-Testing, testing, testing
-
-Testing, testing, testing
