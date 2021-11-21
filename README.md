@@ -56,9 +56,8 @@ main {
 
 .main-nav {
    transform: translate(-50%, -50%);
+   /* 1st encounter - CSS tricks */
 }
-
-/* 1st encounter - CSS tricks */
 
 .main-nav::before {
    clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
@@ -81,11 +80,13 @@ header.addEventListener('click', (e) => {
 
 ### Continued development
 
-Grid layout - more use cases than overall site
+I would like to
+
+Grid layout - more use cases than overall site + more practice with full site layout
 
 ### Useful resources
 
--  [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+-  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This helped me with regards to centering the mobile navigation as the viewport grew wider. The `translate(50%, -50%)` vertical centering method works very nicely when positioning content, and as such will become incredibly useful for future projects.
 
 ## Author
 
@@ -94,7 +95,7 @@ Grid layout - more use cases than overall site
 
 ## Acknowledgments
 
-I have left a copy of the solution I learned a lot from within this repo. This solution was featured in an email newsletter the Front End Mentor founder sent out, due its responsiveness and great taste in animation for the mobile menu/rotating orange on scroll.
+I have left a copy of the solution I used within this repo. This solution was featured in an email newsletter the Front End Mentor founder sent out, due its responsiveness and great taste in animation for the mobile menu and rotating orange on scroll.
 
 ###### TODO
 
