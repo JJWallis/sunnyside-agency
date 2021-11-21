@@ -80,9 +80,7 @@ header.addEventListener('click', (e) => {
 
 ### Continued development
 
-I would like to
-
-Grid layout - more use cases than overall site + more practice with full site layout
+I would like to continue using grid to create full-page layouts, as well as experimenting with other situations where currently I might not think to use it.
 
 ### Useful resources
 
