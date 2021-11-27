@@ -61,7 +61,7 @@ Your users should be able to:
 </button>
 ```
 
-This project was my first time building a navigation for both mobile and wider viewports, therefore introducing a hamgburger icon to toggle that mobile navigation whilst rendering it invisible on larger screens. I quickly learned the importance of making such a toggle accessible by wrapping it in a `<button>` with an `aria-label` attribute, to provide additional context for interactive elements (links or buttons) housing no text content.
+This project was my first time building a navigation for both mobile and wider viewports, therefore introducing a hamgburger icon to toggle that mobile navigation, whilst rendering it invisible on larger screens. I quickly learned the importance of making such a toggle accessible by wrapping it in a `<button>` with an `aria-label` attribute, to provide additional context for interactive elements housing no text content.
 
 ```js
 const innerWidth = () => window.innerWidth
@@ -76,7 +76,7 @@ header.addEventListener('click', (e) => {
 })
 ```
 
-In order to toggle the visibility and behaviour of the mobile navigation, I decided to create a Javascript media query equivalent by running a function that retrieved the viewports inner width whenever the desired event (on resize and click) was fired. This isn't particularly an efficient method to use for future projects, regardless of whether a significant number of users don't resize their browser when visiting a site.
+In order to toggle the visibility and behaviour of the mobile navigation, I decided to create a JavaScript media query equivalent, by running a function that retrieved the viewports inner width whenever the desired event (on resize and click) was fired. I am aware this isn't particularly an efficient method to use for future projects, regardless of whether a significant number of users don't resize their browser when visiting a site.
 
 ```css
 main {
@@ -88,7 +88,7 @@ main {
 }
 ```
 
-This was my first project using grid to layout the whole site, where I learnt the importance of using both px and the `auto` keyword within the `minmax()` function to create responsive containers that adapted to future content additions. When using grid-areas to control the placement of content, it makes changing the order at different breakpoints much easier and more flexible than other layout methods.
+This was my first project using grid to layout the whole site, where I learnt the importance of using both px and the `auto` keyword within the `minmax()` function, to create responsive containers that adapted to future content additions. When using grid-areas to control the placement of content, it allows changing their order at different breakpoints to be much easier and more flexible than other layout methods.
 
 ```css
 .main-nav::before {
@@ -96,7 +96,7 @@ This was my first project using grid to layout the whole site, where I learnt th
 }
 ```
 
-In order to create the triangle-like shape on top of the mobile navigation, I had to learn about the `clip-path` property which allows you to create any shape desired based on a collection of set points. In practice, there are multiple useful sites that will help you generate these shapes visually via an interface similar to Adobe Photoshop, which you can then copy the CSS code from to implement into your own project.
+In order to create the triangle-like shape on top of the mobile navigation, I had to learn about the `clip-path` property, which allows you to create any shape desired based on a collection of set points. In practice, there are multiple useful sites that will help you generate these shapes visually via an interface similar to Adobe Photoshop, which you can then copy from the CSS code to implement into your own project.
 
 ```css
 .cherry img,
@@ -108,7 +108,7 @@ In order to create the triangle-like shape on top of the mobile navigation, I ha
 }
 ```
 
-All the images in this project provided a very nice challenge regarding their control, as there was such a diverse range in their design implementations. The primary images (as referenced above), when setup as background-images, caused overlapping problems with the text content that was positioned in front of them. The solution I used helped me to alleviate this issue by positioning the text over the image, and rendering the image directly in the HTML (instead of in the background via CSS).
+All the images in this project provided a very nice challenge in regards to controlling how they responded, as there was such a diverse range in terms of their design implementations. The primary images, when setup as background-images, caused overlapping problems with the text content that was positioned in front of them. The solution I used helped me to alleviate this issue by positioning the text over the image, and rendering the image directly in the HTML instead of the background via CSS.
 
 ```css
 .profile-img {
@@ -116,7 +116,7 @@ All the images in this project provided a very nice challenge regarding their co
 }
 ```
 
-Furthermore, the profile images in the testimonials section were becoming too large and un-even in their sizing as the viewport size increased (especially when the last flex-child responded to fill the entire viewport width at tablet devices). Once again, the solution helped me solve this problem by applying a fixed px width to each image.
+Furthermore, the profile images in the testimonials section were becoming too large and uneven in their sizing as the viewport size increased, especially when the last flex-child responded to fill the entire viewport width at tablet devices. Once again, the solution helped me solve this problem by applying a fixed px width to each image.
 
 ### Continued development
 
@@ -128,7 +128,7 @@ Numerous problems occured with the hover states of the social icon SVG's within 
 
 ### Useful resources
 
--  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This helped me with regards to centering the mobile navigation as the viewport grew wider. The `translate(50%, -50%)` vertical centering method works very nicely when positioning content, and as such will become incredibly useful for future projects.
+-  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This helped me with regards to centering the mobile navigation as the viewport grew wider. The `translate(50%, -50%)` vertical centering method (in this example on both axis) works very nicely when positioning content, and as such will become incredibly useful for future projects.
 
 ## Author
 
