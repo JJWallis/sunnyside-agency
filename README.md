@@ -124,7 +124,7 @@ I would like to continue using grid to create full-page layouts, as well as expe
 
 In addition, to make the grid container and items more accessible, using a `role="grid/gridcell"` would be more favourable to provide some extra context for assistive technologies.
 
-Numerous problems occured with the hover states of the social icon SVG's within the footer, as the `fill` colour would not change when hovering within the gaps of the original shape. In the future, I would like to learn how to use NPM to install Font Awesome's icon package, which supposedly has greater built Javascript support to fix those hover problems.
+Numerous problems occured with the hover states of the social icon SVG's within the footer, as the `fill` colour would not change when hovering within the gaps of the original shape. In the future, I would like to learn how to use NPM to install Font Awesome's icon package, which supposedly has greater built JavaScript support to fix those hover problems.
 
 ### Useful resources
 
