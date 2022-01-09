@@ -120,13 +120,11 @@ The profile images in the testimonials section were becoming too large and uneve
 
 ### Continued development
 
-I would like to continue using grid to create full-page layouts, as well as experimenting with other situations where currently I might not think to use it.
-
-Numerous problems occured with the hover states of the social icons within the footer, as the `fill` colour would not change when hovering within the gaps of the original shape. In the future, I would like to learn how to use NPM to install Font Awesome's icon package, which supposedly has greater built JavaScript support to fix those hover problems.
+Numerous problems occured regarding the hover states of the social icons within the footer, as the `fill` colour would not change when hovering within the gaps of the original shape. I would like to learn how to use NPM to install Font Awesome's icon package, which supposedly has greater built JavaScript support that I imagine will fix those problems.
 
 ### Useful resources
 
--  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This article helped me with regards to centering the mobile navigation as the viewport grew wider. The `translate(50%, -50%)` centering method works very nicely when positioning content, and as such will become incredibly useful for future projects.
+-  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This article helped me with regards to centering the mobile navigation as the viewport grew wider.
 
 ## Author
 
