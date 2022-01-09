@@ -41,7 +41,7 @@ Your users should be able to:
 -  Mobile-first workflow
 -  CSS Grid
 -  Flexbox
--  Javascript
+-  JavaScript
 
 ### What I learned
 
