@@ -41,7 +41,7 @@ Your users should be able to:
 -  Mobile-first workflow
 -  CSS Grid
 -  Flexbox
--  Vanilla JS
+-  Javascript
 
 ### What I learned
 
@@ -61,7 +61,7 @@ Your users should be able to:
 </button>
 ```
 
-This project was my first time building a navigation for both mobile and wider viewports, therefore introducing a hamgburger icon to toggle that mobile navigation, whilst rendering it invisible on larger screens. I quickly learned the importance of making such a toggle accessible by wrapping it in a `<button>` with an `aria-label` attribute, to provide additional context for interactive elements housing no text content.
+This project was my first time building a navigation for both mobile and wider viewports, introducing the classic hamgburger icon to toggle the mobile navigation whilst rendering it invisible on larger screens. I quickly learned the importance of making such a toggle accessible by wrapping it in a `<button>` with an `aria-label` attribute, providing additional context for interactive elements housing no text content.
 
 ```js
 const innerWidth = () => window.innerWidth
@@ -76,7 +76,7 @@ header.addEventListener('click', (e) => {
 })
 ```
 
-In order to toggle the visibility and behaviour of the mobile navigation, I decided to create a JavaScript media query equivalent, by running a function that retrieved the viewports inner width whenever the desired event (on resize or click) was fired.
+In order to toggle the visibility and behaviour of the mobile navigation, I decided to create a JavaScript media query equivalent by running a function that retrieved the viewports inner width whenever the desired event was fired (on resize or click).
 
 ```css
 main {
@@ -88,7 +88,7 @@ main {
 }
 ```
 
-This was my first project using Grid to layout the whole site, where I learnt the importance of using both px and the `auto` keyword within the `minmax()` function, to create responsive containers that adapted to future content additions. When using grid-areas to control the placement of content, it allows changing the order at different breakpoints to be much easier and more flexible than other layout methods.
+This was my first project using Grid to layout the whole site, where I learnt the importance of using both px and the `auto` keyword within the `minmax()` function, creating responsive containers that adapted to future content additions. When using grid-areas to control the placement of content, it allows changing the order at different breakpoints to be much easier and more flexible than other layout methods.
 
 ```css
 .main-nav::before {
@@ -96,7 +96,7 @@ This was my first project using Grid to layout the whole site, where I learnt th
 }
 ```
 
-In order to create the triangle-like shape on top of the mobile navigation, I had to learn about the `clip-path` property, which allows you to create any shape desired based on a collection of set points. In practice, there are multiple useful sites that will help generate these shapes for you via an interface similar to Adobe Photoshop, which CSS you can then copy to implement into your own project.
+In order to create the triangle shape on top of the mobile navigation, I had to learn about the `clip-path` property that allows us to create any shape desired based on a collection of set points. In practice, there are multiple useful sites that will help generate these shapes for you through an interface similar to Adobe Photoshop.
 
 ```css
 .cherry img,
