@@ -108,7 +108,7 @@ In order to create the triangle shape on top of the mobile navigation, I had to 
 }
 ```
 
-All the images in this project provided a very nice challenge in regards to controlling how they responded, as there was such a diverse range in terms of their design implementations. The primary images, when setup as background-images, caused overlapping problems with the text content that was positioned in front of them. The solution I've referenced in this repo helped me to alleviate this issue by positioning the text over the image and rendering the image directly in the HTML (instead of the background).
+All the images in this project provided a very nice challenge in regards to controlling how they responded, as there was such a diverse range in terms of their design implementations. When setup as background-images, the primary images caused overlapping problems with the text content that was positioned in front of them. The solution I've referenced in this repo helped me to alleviate this issue by positioning the text over the image and rendering the image directly in the HTML instead of in the background.
 
 ```css
 .profile-img {
@@ -116,7 +116,7 @@ All the images in this project provided a very nice challenge in regards to cont
 }
 ```
 
-Furthermore, the profile images in the testimonials section were becoming too large and uneven in their sizing as the viewport size increased, especially when the last flex child responded to fill the entire viewport width at tablet devices. Once again, the solution helped me solve this problem by applying a fixed px width to each image.
+The profile images in the testimonials section were becoming too large and uneven in their sizing as the viewport increased, especially when the last flex child responded to fill the entire viewport width at tablet devices. Once again, the solution helped me solve this problem by applying a fixed px width to each image.
 
 ### Continued development
 
