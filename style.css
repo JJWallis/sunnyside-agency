@@ -134,7 +134,7 @@ body,
 .egg {
    background: yellow url('/images/desktop/image-transform.jpg') no-repeat
       center 40%;
-   background-size: 100%;
+   background-size: cover;
    grid-area: egg;
 }
 
@@ -153,6 +153,9 @@ body,
 }
 
 .wine {
+   background: yellow url('/images/desktop/image-stand-out.jpg') no-repeat
+      center 40%;
+   background-size: cover;
    grid-area: wine;
 }
 
@@ -162,13 +165,20 @@ body,
 .egg img {
    max-width: 100%;
    display: block;
+   opacity: 0;
 }
 
 .cherry {
+   background: yellow url('/images/desktop/image-graphic-design.jpg') no-repeat
+      center 40%;
+   background-size: cover;
    grid-area: cherry;
 }
 
 .orange {
+   background: yellow url('/images/desktop/image-photography.jpg') no-repeat
+      center 40%;
+   background-size: cover;
    grid-area: orange;
 }
 
