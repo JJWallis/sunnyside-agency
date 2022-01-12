@@ -123,7 +123,7 @@ Numerous problems occured regarding the hover states of the social icons within 
 
 ### Useful resources
 
--  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This article helped me with regards to centering the mobile navigation as the viewport grew wider.
+-  [CSS Centering Complete Guide](https://css-tricks.com/centering-css-complete-guide/) - This article helped me with centering the mobile navigation as the viewport grew wider.
 
 ## Author
 
